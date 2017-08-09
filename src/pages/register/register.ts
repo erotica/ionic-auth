@@ -1,28 +1,23 @@
 import { Component } from '@angular/core';
+import { NavController, NavParams, LoadingController, ToastController } from 'ionic-angular';
 import { AuthService } from '../../providers/auth-service';
-import { NavController, App, LoadingController, ToastController } from 'ionic-angular';
-import { LoginPage } from '../login/login';
 
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'page-register',
+  templateUrl: 'register.html'
 })
-export class HomePage {
+export class RegisterPage {
 
   loading: any;
-  isLoggedIn: boolean = false;
+  regData = { username:'', password:'' };
 
-  constructor(public app: App, public navCtrl: NavController, public authService: AuthService, public loadingCtrl: LoadingController, private toastCtrl: ToastController) {
-    if(localStorage.getItem("token")) {
-      this.isLoggedIn = true;
-    }
-  }
+  constructor(public navCtrl: NavController, public navParams: NavParams, public authService: AuthService, public loadingCtrl: LoadingController, private toastCtrl: ToastController) {}
 
-  logout() {
-    this.authService.logout().then((result) => {
+  doSignup() {
+    this.showLoader();
+    this.authService.register(this.regData).then((result) => {
       this.loading.dismiss();
-      let nav = this.app.getRootNav();
-      nav.setRoot(LoginPage);
+      this.navCtrl.pop();
     }, (err) => {
       this.loading.dismiss();
       this.presentToast(err);

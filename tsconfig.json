@@ -22,5 +22,14 @@
   "compileOnSave": false,
   "atom": {
     "rewriteTsconfig": false
+  },
+"name": "Distriputorapp",
+"app_id": "e5d3dc7b",
+"proxies": [
+  {
+  "path": "/greetinglogin",
+  "proxyUrl": "http://*****/greetinglogin"
   }
+]
+
 }
