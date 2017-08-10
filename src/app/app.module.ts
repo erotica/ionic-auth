@@ -30,8 +30,7 @@ import { AuthService} from '../providers/auth-service';
     TabsPage,
     LoginPage,
     RegisterPage,
-    MainmenuPage
-   
+    MainmenuPage   
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { LoginPage } from '../login/login';
+
 
 /**
  * Generated class for the MainmenuPage page.
@@ -20,6 +22,11 @@ export class MainmenuPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MainmenuPage');
+  }
+
+  logout() {
+    this.navCtrl.push(LoginPage);
+
   }
 
 }

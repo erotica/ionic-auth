@@ -14,5 +14,34 @@
 
 
 <ion-content padding>
+  
+  <p>
+    <button ion-button full icon-left>
+      <ion-icon ios="ios-alarm" md="md-alarm"></ion-icon>
+      업무알림(예정 업무)
+    </button>
+  </p>
+
+  <p>
+    <button ion-button full icon-left>
+      <ion-icon name="search"></ion-icon>
+      자산검색
+    </button>
+  </p>
+
+  <p>
+    <button ion-button full icon-left>
+      <ion-icon name="paper"></ion-icon>
+      자산조사(실무확인)
+    </button>
+  </p>
+
+  <p>
+    <button ion-button color="secondary" full>해당계정 자산보기</button>
+  </p>
+
+  <p>
+    <button ion-button full (click)="logout()">Logout</button>
+  </p>
 
 </ion-content>
