@@ -14,15 +14,42 @@
 
 
 <ion-content padding>
-   <ion-list>
+  <ion-item>
+   <ion-range min="1" max="3" snaps="true" [(ngModel)]="fontSize" class="fontSize">
+
+<ion-label range-left class="small-text">a</ion-label>
+<ion-label range-right>A</ion-label>
+</ion-range>
+</ion-item>
+<p class="fontSize" [ngClass]="{small: fontSize===1, medium: fontSize===2, big: fontSize===3}">test font size change</p>
+<div class="font-small">
+   <ion-grid>
     <ion-row>
-      <ion-col>구분 </ion-col>
-      <ion-col>일자 </ion-col>
-      <ion-col>품목 </ion-col>
-      <ion-col>변경전 </ion-col>
-      <ion-col>변경후 </ion-col>
-      <ion-col>상태 </ion-col>
-      <ion-col>변경자 </ion-col>
+      <ion-col>구분</ion-col>
+      <ion-col >일자</ion-col>
+      <ion-col>품목</ion-col>
+      <ion-col >변경전</ion-col>
+      <ion-col >변경후</ion-col>
+      <ion-col>상태</ion-col>
+      <ion-col >변경자</ion-col>
     </ion-row>
-   </ion-list>
+    <ion-row>
+    <ion-col>구분</ion-col>
+      <ion-col >일자</ion-col>
+      <ion-col>품목</ion-col>
+      <ion-col >변경전</ion-col>
+      <ion-col >변경후</ion-col>
+      <ion-col>상태</ion-col>
+      <ion-col >변경자</ion-col>
+    </ion-row>
+  </ion-grid>
+<ion-list>
+   <ion-list-header>Stocks</ion-list-header>
+   <ion-item *ngFor="let stock of stocks" [attr.title]="stock.title | lowercase">
+      
+      <ion-label>{{stock.id}}</ion-label>
+      <ion-label>{{stock.title}}</ion-label>
+    </ion-item>
+ </ion-list>
+ </div> 
 </ion-content>
