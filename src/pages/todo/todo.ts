@@ -20,11 +20,16 @@ import { AuthService } from '../../providers/auth-service';
 })
 
 export class TodoPage {
-  
-  loading: any;
-  stocks:Array<{id: string, title: string}>=[];
 
-  constructor(public navCtrl: NavController, public authService: AuthService,public navParams: NavParams,public loadingCtrl: LoadingController, private toastCtrl: ToastController) {}
+  loading: any;
+  stocks: any;
+
+  constructor(
+    public navCtrl: NavController, 
+    public authService: AuthService,
+    public navParams: NavParams,
+    public loadingCtrl: LoadingController, 
+    private toastCtrl: ToastController) {}
 
   todoSearch() {
     this.showLoader();
