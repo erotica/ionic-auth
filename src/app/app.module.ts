@@ -14,12 +14,14 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { OAuthService } from 'angular-oauth2-oidc';
-
+import { AuthService} from '../providers/auth-service';
 
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage} from '../pages/register/register'
 import { MainmenuPage } from '../pages/mainmenu/mainmenu';
-import { AuthService} from '../providers/auth-service';
+import { TodoPage} from '../pages/todo/todo';
+import { AssetinfoPage } from '../pages/assetinfo/assetinfo';
+import { MyassetPage } from '../pages/myasset/myasset';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,10 @@ import { AuthService} from '../providers/auth-service';
     TabsPage,
     LoginPage,
     RegisterPage,
-    MainmenuPage   
+    MainmenuPage,
+    TodoPage,
+    AssetinfoPage,
+    MyassetPage  
   ],
   imports: [
     BrowserModule,
@@ -46,7 +51,10 @@ import { AuthService} from '../providers/auth-service';
     TabsPage,
     LoginPage,
     RegisterPage,
-    MainmenuPage
+    MainmenuPage,
+    TodoPage,
+    AssetinfoPage,
+    MyassetPage
   ],
   providers: [
     StatusBar,

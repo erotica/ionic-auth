@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { LoginPage } from '../login/login';
+import { TodoPage } from '../todo/todo';
+import { AssetinfoPage } from '../assetinfo/assetinfo';
+import { MyassetPage } from '../myasset/myasset';
 
 
-/**
+/** 
  * Generated class for the MainmenuPage page.
  *
  * See http://ionicframework.com/docs/components/#navigation for more info
@@ -27,6 +30,17 @@ export class MainmenuPage {
   logout() {
     this.navCtrl.push(LoginPage);
 
+  }
+  todoList() {
+    this.navCtrl.push(TodoPage);
+  }
+
+   asset() {
+    this.navCtrl.push(AssetinfoPage);
+  }
+
+  myassetsearch() {
+    this.navCtrl.push(MyassetPage);
   }
 
 }

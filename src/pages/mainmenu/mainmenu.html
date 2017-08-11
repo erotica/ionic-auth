@@ -16,14 +16,14 @@
 <ion-content padding>
   
   <p>
-    <button ion-button full icon-left>
+    <button ion-button full icon-left (click)="todoList()">
       <ion-icon ios="ios-alarm" md="md-alarm"></ion-icon>
       업무알림(예정 업무)
     </button>
   </p>
 
   <p>
-    <button ion-button full icon-left>
+    <button ion-button full icon-left (click) = "asset()">
       <ion-icon name="search"></ion-icon>
       자산검색
     </button>
@@ -37,7 +37,9 @@
   </p>
 
   <p>
-    <button ion-button color="secondary" full>해당계정 자산보기</button>
+    <button ion-button color="secondary" full (click) = "myassetsearch()">
+      해당계정 자산보기
+    </button>
   </p>
 
   <p>
