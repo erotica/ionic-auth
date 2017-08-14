@@ -18,7 +18,7 @@ export class AuthService {
         headers.append('Content-Type', 'application/json');
         //Performs a request with post http method.
         //this.http.post(apiUrl+'/posts', JSON.stringify(credentials), {headers: headers})
-        this.http.get(apiUrl+'/posts/1', {headers: headers})
+        this.http.get(apiUrl+'/posts', {headers: headers})
           .subscribe(res => {
             resolve(res.json());
           }, (err) => {
