@@ -1,3 +1,17 @@
 page-assetinfo {
-
+.small{
+    font-size: 10px;
+    }
+    .medium{
+    font-size: 20px;
+    }
+    .big{
+    font-size: 30px;
+    }
+    .font-small {
+    font-size: 10px;
+    }
+    .reset-filters {
+    color: color($colors, danger);
+    }
 }
