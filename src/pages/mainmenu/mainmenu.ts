@@ -4,6 +4,7 @@ import { LoginPage } from '../login/login';
 import { TodoPage } from '../todo/todo';
 import { AssetinfoPage } from '../assetinfo/assetinfo';
 import { MyassetPage } from '../myasset/myasset';
+import { AssetinspectPage } from '../assetinspect/assetinspect';
 
 
 /** 
@@ -40,7 +41,10 @@ export class MainmenuPage {
   }
 
   myassetsearch() {
-    this.navCtrl.push(MyassetPage);
+    this.navCtrl.push(MyassetPage); 
+  }
+  assetinspectpage() {
+    this.navCtrl.push(AssetinspectPage);
   }
 
 }

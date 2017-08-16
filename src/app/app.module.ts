@@ -15,6 +15,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { OAuthService } from 'angular-oauth2-oidc';
 import { AuthService} from '../providers/auth-service';
+import { UserService } from '../providers/user';
 
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage} from '../pages/register/register'
@@ -22,6 +23,7 @@ import { MainmenuPage } from '../pages/mainmenu/mainmenu';
 import { TodoPage} from '../pages/todo/todo';
 import { AssetinfoPage } from '../pages/assetinfo/assetinfo';
 import { MyassetPage } from '../pages/myasset/myasset';
+import { AssetinspectPage } from '../pages/assetinspect/assetinspect';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import { MyassetPage } from '../pages/myasset/myasset';
     MainmenuPage,
     TodoPage,
     AssetinfoPage,
-    MyassetPage  
+    MyassetPage,
+    AssetinspectPage,  
   ],
   imports: [
     BrowserModule,
@@ -54,14 +57,16 @@ import { MyassetPage } from '../pages/myasset/myasset';
     MainmenuPage,
     TodoPage,
     AssetinfoPage,
-    MyassetPage
+    MyassetPage,
+    AssetinspectPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     OAuthService,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AuthService
+    AuthService,
+    UserService
   ]
 })
 export class AppModule {}
