@@ -20,13 +20,13 @@ export class AssetinspectPage {
   constructor(public navCtrl: NavController, public navParams: NavParams,private user: UserService ) {
 
   console.log("AssetinspectPage::constructor()");
-  user.getUsers( users => {
-    this.biguser = users;
+  user.getUsers( data => {
+    this.biguser = data;
     });
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AssetinspectPage');
   }
-
+ 
 }
