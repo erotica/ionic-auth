@@ -17,10 +17,9 @@ import { UserService } from '../../providers/user';
 export class AssetinspectPage {
   biguser:Array<any>;
   users: Array<{ cell:string; email:string; login: { username: string; }; picture: { thumbnail: string; }}>;
-  constructor(public navCtrl: NavController, public navParams: NavParams,private user: UserService ) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,private userDataService: UserService ) {
 
-  console.log("AssetinspectPage::constructor()");
-  user.getUsers( data => {
+  userDataService.getUsers( data => {
     this.biguser = data;
     });
   }
