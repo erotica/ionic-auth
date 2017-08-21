@@ -25,6 +25,9 @@ import { AssetinfoPage } from '../pages/assetinfo/assetinfo';
 import { MyassetPage } from '../pages/myasset/myasset';
 import { AssetinspectPage } from '../pages/assetinspect/assetinspect';
 
+import { Camera } from '@ionic-native/camera';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -66,7 +69,9 @@ import { AssetinspectPage } from '../pages/assetinspect/assetinspect';
     OAuthService,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthService,
-    UserService
+    UserService,
+    Camera,
+    BarcodeScanner
   ]
 })
 export class AppModule {}

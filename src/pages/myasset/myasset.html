@@ -6,13 +6,19 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>내 자산보기</ion-title>
   </ion-navbar>
 
 </ion-header>
-
+<div *ngIf="results">
+  <p>{{results.text}}</p>
+  <p>{{results.format}</p>
+  <p> {{results.cancelled}}</p>
+</div>
 
 <ion-content padding>
-
+  <button ion-button (click)="scanBarcode()">Scan Barcode</button>
+  <button ion-button (click)="encodeData()">Encode</button>
+  <button ion-button (click) ="cameraTaken()" > Camera Taken </button>
 </ion-content>
