@@ -45,15 +45,16 @@
       <ion-col >홍길동</ion-col>
     </ion-row>
   </ion-grid>
-  <!--
+ 
 <ion-list>
-  <button ion-button (click)="getStocks">Get Stock</button>
-   <ion-list-header>Stocks</ion-list-header>
-   <ion-item *ngFor="let stock of stocks" >
-      <ion-label>{{stock.id}}</ion-label>
-      <ion-label>{{stock.title}}</ion-label>
+  <button ion-button (click)="Todos()">Todos</button>
+   <ion-list-header>Todos</ion-list-header>
+   <ion-item *ngFor="let todo of todos" >
+      <ion-label>{{todo.id}}</ion-label>
+      <ion-label>{{todo.title}}</ion-label>
+      <ion-label>{{todo.completed}}</ion-label>
     </ion-item>
  </ion-list>
-  -->
+  
  </div> 
 </ion-content>

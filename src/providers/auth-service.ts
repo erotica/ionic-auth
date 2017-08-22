@@ -6,7 +6,8 @@ import {Observable} from 'rxjs/Observable';
 
 //let apiUrl = 'http://localhost:8080/api/';  // url to   
 //let apiUrl = 'http://rest-service.guides.spring.io/greeting';
-let apiUrl ='https://jsonplaceholder.typicode.com';
+let apiUrl2 ='https://jsonplaceholder.typicode.com';
+let apiUrl = 'https://api.coinmarketcap.com/v1/ticker/NEO/';
 import { Stock } from '../pages/todo/stock';
 
 @Injectable()
@@ -25,7 +26,7 @@ export class AuthService {
         headers.append('Content-Type', 'application/json');
         //Performs a request with post http method.
         //this.http.post(apiUrl+'/posts', JSON.stringify(credentials), {headers: headers})
-        this.http.get(apiUrl+'/posts', {headers: headers})
+        this.http.get(apiUrl2+'/posts', {headers: headers})
           .subscribe(res => {
             resolve(res.json());
           }, (err) => {
@@ -38,7 +39,7 @@ export class AuthService {
     return new Promise((resolve, reject) => {
         let headers = new Headers();
         headers.append('Content-Type', 'application/json');
-        this.http.post(apiUrl+'guest/signup', JSON.stringify(data), {headers: headers})
+        this.http.post(apiUrl2+'guest/signup', JSON.stringify(data), {headers: headers})
           .subscribe(res => {
             resolve(res.json());
           }, (err) => {
@@ -52,7 +53,7 @@ export class AuthService {
         let headers = new Headers();
         headers.append('X-Auth-Token', localStorage.getItem('token'));
 
-        this.http.post(apiUrl+'logout', {}, {headers: headers})
+        this.http.post(apiUrl2+'logout', {}, {headers: headers})
           .subscribe(res => {
             localStorage.clear();
           }, (err) => {
@@ -67,7 +68,7 @@ export class AuthService {
         headers.append('Content-Type', 'application/json');
         //Performs a request with post http method.
         //this.http.post(apiUrl+'/posts', JSON.stringify(credentials), {headers: headers})
-        this.http.get(apiUrl+'/todos', {headers: headers})
+        this.http.get(apiUrl2+'/todos', {headers: headers})
           .subscribe(res => {
             resolve(res.json());
           }, (err) => {
@@ -80,6 +81,7 @@ export class AuthService {
     return this.http.get(this.testapiurl)
         //.flatMap((response) => response.json())
         //.filter((person) => person.id > 5)
+        
                .toPromise()
                .then(response => response.json().data as Stock[])
                .catch(this.handleError);

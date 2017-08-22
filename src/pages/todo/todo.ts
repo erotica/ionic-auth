@@ -23,7 +23,7 @@ export class TodoPage implements OnInit {
   loading: any;
   todos: any;
   para: any ;
-  Stocks:Stock[] =[];
+  stocks:Stock[] ;
 
   constructor(
     public navCtrl: NavController, 
@@ -47,10 +47,8 @@ export class TodoPage implements OnInit {
   getStocks(): void {
     this.authService
         .getStocks()
-        .then(Stocks => this.Stocks = Stocks);
+        .then(data => this.stocks = data);
    console.log("getStockes clicked");
-   console.log(this.Stocks);
-  
   }
   
   ngOnInit(): void {
