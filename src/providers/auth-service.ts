@@ -13,7 +13,8 @@ import { Stock } from '../pages/todo/stock';
 @Injectable()
 export class AuthService {
 
-  private testapiurl= 'https://jsonplaceholder.typicode.com/todos';
+  private testapiurl= 'https://mas.hist.co.kr/PdsWorktime.do';
+ // private testapiurl= 'https://api.coinmarketcap.com/v1/ticker';
 
   private doctors = [];
 
@@ -68,7 +69,7 @@ export class AuthService {
         headers.append('Content-Type', 'application/json');
         //Performs a request with post http method.
         //this.http.post(apiUrl+'/posts', JSON.stringify(credentials), {headers: headers})
-        this.http.get(apiUrl2+'/todos', {headers: headers})
+        this.http.get(this.testapiurl, {headers: headers})
           .subscribe(res => {
             resolve(res.json());
           }, (err) => {

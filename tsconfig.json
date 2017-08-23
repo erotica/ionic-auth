@@ -27,8 +27,8 @@
 "app_id": "e5d3dc7b",
 "proxies": [
   {
-  "path": "/greetinglogin",
-  "proxyUrl": "http://*****/greetinglogin"
+  "path": "/Ticker",
+  "proxyUrl": "https://mas.hist.co.kr/PdsWorktime.do"
   }
 ]
 
