@@ -1,4 +1,4 @@
-export class Stock {
+export class Todo {
     userId: string;
     id: number;
     title: string;

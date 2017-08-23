@@ -8,13 +8,13 @@ import {Observable} from 'rxjs/Observable';
 //let apiUrl = 'http://rest-service.guides.spring.io/greeting';
 let apiUrl2 ='https://jsonplaceholder.typicode.com';
 let apiUrl = 'https://api.coinmarketcap.com/v1/ticker/NEO/';
-import { Stock } from '../pages/todo/stock';
+import { Todo } from '../pages/todo/todolist';
 
 @Injectable()
 export class AuthService {
 
-  private testapiurl= 'https://mas.hist.co.kr/PdsWorktime.do';
- // private testapiurl= 'https://api.coinmarketcap.com/v1/ticker';
+  //private testapiurl= 'https://mas.hist.co.kr/PdsWorktime.do';
+ private testapiurl= 'https://jsonplaceholder.typicode.com/todos';
 
   private doctors = [];
 
@@ -78,19 +78,19 @@ export class AuthService {
     });
   }
 
-   getStocks(): Promise<Stock[]> {
+   getStocks(): Promise<Todo[]> {
     return this.http.get(this.testapiurl)
         //.flatMap((response) => response.json())
         //.filter((person) => person.id > 5)
         
                .toPromise()
-               .then(response => response.json().data as Stock[])
+               .then(response => response.json().data as Todo[])
                .catch(this.handleError);
   }
   getStocks2() {
     return this.http.get(this.testapiurl)
                .toPromise()
-               .then(response => response.json().data as Stock[])
+               .then(response => response.json().data as Todo[])
                .catch(this.handleError);
 
   }

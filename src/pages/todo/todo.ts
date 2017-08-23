@@ -2,15 +2,18 @@ import { Component,OnInit } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { NgClass } from '@angular/common';
 
+
 import { LoadingController, ToastController } from 'ionic-angular';
 import { AuthService } from '../../providers/auth-service';
+ 
+import { TodoDetailPage } from  '../../pages/todo-detail/todo-detail';
 /**
  * Generated class for the TodoPage page.
  *
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
  */
-import { Stock } from './stock';
+import { Todo } from './todolist';
 @IonicPage()
 @Component({
   selector: 'page-todo',
@@ -23,7 +26,9 @@ export class TodoPage implements OnInit {
   loading: any;
   todos: any;
   para: any ;
-  stocks:Stock[] ;
+  mytodos:Todo[] ;
+  selectedMyTodo: Todo;
+  stocks:any;
 
   constructor(
     public navCtrl: NavController, 
@@ -54,6 +59,15 @@ export class TodoPage implements OnInit {
   ngOnInit(): void {
    this.todoSearch();
   }
+
+  onSelect(todo: Todo): void {
+    this.selectedMyTodo = todo;
+  }
+
+ gotoDetail(tododata:any) {
+    this.navCtrl.push(TodoDetailPage,{id:tododata.id, title:tododata.title});
+  }
+
   showLoader() {
     console.log('ionViewDidLoad TodoPage');
   }

@@ -46,15 +46,24 @@
     </ion-row>
   </ion-grid>
  
-<ion-list>
+<ion-list >
+    <div *ngIf="selectedMyTodo">
+        <h2>
+          {{selectedMyTodo.title | uppercase}} is my todo
+        </h2>
+        <button (click)="gotoDetail(selectedMyTodo)">View Details</button>
+      </div>
   <button ion-button (click)="todoSearch()">Todos</button>
    <ion-list-header>Todos</ion-list-header>
-   <ion-item *ngFor="let todo of todos" >
+   <ion-item *ngFor="let todo of todos" (click)="onSelect(todo)"  > 
       <ion-label>{{todo.id}}</ion-label>
       <ion-label>{{todo.title}}</ion-label>
       <ion-label>{{todo.completed}}</ion-label>
     </ion-item>
  </ion-list>
-  
- </div> 
+  </div> 
+ 
 </ion-content>
+
+
+

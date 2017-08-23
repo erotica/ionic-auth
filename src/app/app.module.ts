@@ -24,6 +24,7 @@ import { TodoPage} from '../pages/todo/todo';
 import { AssetinfoPage } from '../pages/assetinfo/assetinfo';
 import { MyassetPage } from '../pages/myasset/myasset';
 import { AssetinspectPage } from '../pages/assetinspect/assetinspect';
+import { TodoDetailPage } from '../pages/todo-detail/todo-detail';
 
 import { Camera } from '@ionic-native/camera';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
@@ -42,6 +43,7 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
     AssetinfoPage,
     MyassetPage,
     AssetinspectPage,  
+    TodoDetailPage,
   ],
   imports: [
     BrowserModule,
@@ -61,7 +63,8 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
     TodoPage,
     AssetinfoPage,
     MyassetPage,
-    AssetinspectPage
+    AssetinspectPage,
+    TodoDetailPage
   ],
   providers: [
     StatusBar,
