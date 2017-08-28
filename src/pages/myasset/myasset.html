@@ -20,5 +20,7 @@
 <ion-content padding>
   <button ion-button (click)="scanBarcode()">Scan Barcode</button>
   <button ion-button (click)="encodeData()">Encode</button>
-  <button ion-button (click) ="cameraTaken()" > Camera Taken </button>
+  <button ion-button (click) ="takePicture()" > Camera Taken </button>
+  <img [src]="captureDataUrl" *ngIf="captureDataUrl"/>
+  <button ion-button (click) ="uploadImage()" > 파일전송 </button>
 </ion-content>

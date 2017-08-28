@@ -77,7 +77,10 @@ import { FileTransfer } from '@ionic-native/file-transfer';
     AuthService,
     UserService,
     Camera,
-    BarcodeScanner
+    BarcodeScanner,
+    File,
+    FilePath,
+    FileTransfer
   ]
 })
 export class AppModule {}
