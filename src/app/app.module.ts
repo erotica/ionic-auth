@@ -28,6 +28,9 @@ import { TodoDetailPage } from '../pages/todo-detail/todo-detail';
 
 import { Camera } from '@ionic-native/camera';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import { File } from '@ionic-native/file';
+import { FilePath} from '@ionic-native/file-path';
+import { FileTransfer } from '@ionic-native/file-transfer';
 
 @NgModule({
   declarations: [

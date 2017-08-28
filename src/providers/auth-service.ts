@@ -13,8 +13,8 @@ import { Todo } from '../pages/todo/todolist';
 @Injectable()
 export class AuthService {
 
-  //private testapiurl= 'https://mas.hist.co.kr/PdsWorktime.do';
- private testapiurl= 'https://jsonplaceholder.typicode.com/todos';
+// private testapiurl= 'https://mas.hist.co.kr/PdsWorktime.do';
+private testapiurl= 'https://jsonplaceholder.typicode.com/todos';
 
   private doctors = [];
 
@@ -27,7 +27,7 @@ export class AuthService {
         headers.append('Content-Type', 'application/json');
         //Performs a request with post http method.
         //this.http.post(apiUrl+'/posts', JSON.stringify(credentials), {headers: headers})
-        this.http.get(apiUrl2+'/posts', {headers: headers})
+        this.http.get(this.testapiurl, {headers: headers})
           .subscribe(res => {
             resolve(res.json());
           }, (err) => {
