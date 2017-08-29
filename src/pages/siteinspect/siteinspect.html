@@ -1,18 +1,116 @@
 <!--
-  Generated template for the SiteinspectPage page.
+  Generated template for the AssetinfoPage page.
 
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
 <ion-header>
-
   <ion-navbar>
-    <ion-title>siteinspect</ion-title>
+  
+    <ion-title>현장검수</ion-title>
+   
   </ion-navbar>
-
 </ion-header>
-
-
 <ion-content padding>
+  <ion-item-group>
+    <ion-item outline>
+    바코드
+    <button ion-button outline item-end icon-left icon-only>
+      <ion-icon name="search"></ion-icon>
+    </button>
+    <button ion-button outline item-end icon-left >
+      SCAN
+    </button>
+  </ion-item>
+  </ion-item-group> 
+  
+  <div class="font-small">
+  <ion-item-group class="font-small">
+      <ion-item>
+        <ion-label fixed>자산코드</ion-label>
+        <ion-input type="text" value="D20170001" ></ion-input>
+      </ion-item>
+       <ion-item>
+        <ion-label fixed>장비구분</ion-label>
+        <ion-input  type="text" value="개인"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>사용자</ion-label>
+        <ion-input  type="text" value="홍길동"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>관리부서</ion-label>
+        <ion-input type="text" value="NW기술그룹"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>품목명</ion-label>
+        <ion-input type="text" value="노트북"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>모델명</ion-label>
+        <ion-input type="text" value="DB123459-COU/R"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>S/N</ion-label>
+        <ion-input type="text" value="JSWX12356CHA"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>취득수량</ion-label>
+        <ion-input type="text" value="1"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>취득금액</ion-label>
+        <ion-input type="text" value="94,0000"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>위치정보</ion-label>
+        <ion-input type="text" value="본사2층"></ion-input>
+      </ion-item>
+        <ion-item>
+        <ion-label fixed>현상태</ion-label>
+        <ion-input type="text" value="사용중"></ion-input>
+      </ion-item>
+    </ion-item-group>
+  </div>
 
+  <div>
+  <ion-list>
+  <ion-item>
+    <button ion-button outline item-end icon-left>
+      <ion-icon name="star"></ion-icon>
+      현장검수
+    </button>
+    <button ion-button outline item-end icon-left>
+      <ion-icon name="star"></ion-icon>
+      입출고
+    </button>
+    <button ion-button outline item-end icon-left>
+      <ion-icon name="star"></ion-icon>
+      사양변경
+    </button>
+    <button ion-button outline item-end icon-left>
+      <ion-icon name="star"></ion-icon>
+      이동신청
+    </button>
+  </ion-item>
+   <ion-item>
+    <button ion-button outline item-end icon-left>
+      <ion-icon name="star"></ion-icon>
+      사직자반납
+    </button>
+    <button ion-button outline item-end icon-left>
+      <ion-icon name="star"></ion-icon>
+      대여/회수
+    </button>
+    <button ion-button outline item-end icon-left>
+      <ion-icon name="star"></ion-icon>
+      수리신청
+    </button>
+    <button ion-button outline item-end icon-left>
+      <ion-icon name="star"></ion-icon>
+      이미지
+    </button>
+  </ion-item>
+</ion-list>
+  </div>
 </ion-content>

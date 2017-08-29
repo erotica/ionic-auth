@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { SiteinspectPage } from '../siteinspect/siteinspect';
 
 /**
  * Generated class for the AssetinfoPage page.
