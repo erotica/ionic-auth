@@ -79,7 +79,7 @@ export class MyassetPage {
 public takePicture(sourceType) {
   // Create options for the Camera Dialog
   var options = {
-    quality: 100,
+    quality: 50,
     sourceType: sourceType,
     saveToPhotoAlbum: false,
     correctOrientation: true
@@ -118,7 +118,7 @@ private copyFileToLocalDir(namePath, currentName, newFileName) {
   this.file.copyFile(namePath, currentName, cordova.file.dataDirectory, newFileName).then(success => {
     this.lastImage = newFileName;
   }, error => {
-    this.presentToast('Error while storing file.');
+    this.presentToast('Error while storing file in device dirctory.');
   });
 }
   
