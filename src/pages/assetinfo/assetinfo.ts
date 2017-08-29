@@ -22,5 +22,7 @@ export class AssetinfoPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad AssetinfoPage');
   }
-
+  siteinspectpage() {
+    this.navCtrl.push(SiteinspectPage);
+  }
 }

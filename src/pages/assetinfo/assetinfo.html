@@ -70,13 +70,21 @@
         <ion-label fixed>현상태</ion-label>
         <ion-input type="text" value="사용중"></ion-input>
       </ion-item>
+      <ion-item>
+          <ion-label>Gender</ion-label>
+          <ion-select [(ngModel)]="gender">
+            <ion-option value="f">Female</ion-option>
+            <ion-option value="m">Male</ion-option>
+          </ion-select>
+        </ion-item>
+      
     </ion-item-group>
   </div>
 
   <div>
   <ion-list>
   <ion-item>
-    <button ion-button outline item-end icon-left>
+    <button ion-button outline item-end icon-left (click)="siteinspectpage()">
       <ion-icon name="star"></ion-icon>
       현장검수
     </button>

@@ -53,10 +53,10 @@ export class MyassetPage {
   
  public presentActionSheet() {
   let actionSheet = this.actionSheetCtrl.create({
-    title: 'Select Image Source',
+    title: '이미지를 선택하세요',
     buttons: [
       {
-        text: 'Load from Library',
+        text: 'Gallery',
         handler: () => {
           this.takePicture(this.camera.PictureSourceType.PHOTOLIBRARY);
         }

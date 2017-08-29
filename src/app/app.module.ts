@@ -25,6 +25,7 @@ import { AssetinfoPage } from '../pages/assetinfo/assetinfo';
 import { MyassetPage } from '../pages/myasset/myasset';
 import { AssetinspectPage } from '../pages/assetinspect/assetinspect';
 import { TodoDetailPage } from '../pages/todo-detail/todo-detail';
+import { SiteinspectPage } from '../pages/siteinspect/siteinspect';
 
 import { Camera } from '@ionic-native/camera';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
@@ -47,6 +48,7 @@ import { FileTransfer } from '@ionic-native/file-transfer';
     MyassetPage,
     AssetinspectPage,  
     TodoDetailPage,
+    SiteinspectPage,
   ],
   imports: [
     BrowserModule,
@@ -67,7 +69,8 @@ import { FileTransfer } from '@ionic-native/file-transfer';
     AssetinfoPage,
     MyassetPage,
     AssetinspectPage,
-    TodoDetailPage
+    TodoDetailPage,
+    SiteinspectPage
   ],
   providers: [
     StatusBar,

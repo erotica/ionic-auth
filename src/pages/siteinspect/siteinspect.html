@@ -12,18 +12,6 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding>
-  <ion-item-group>
-    <ion-item outline>
-    바코드
-    <button ion-button outline item-end icon-left icon-only>
-      <ion-icon name="search"></ion-icon>
-    </button>
-    <button ion-button outline item-end icon-left >
-      SCAN
-    </button>
-  </ion-item>
-  </ion-item-group> 
-  
   <div class="font-small">
   <ion-item-group class="font-small">
       <ion-item>
@@ -53,63 +41,46 @@
       <ion-item>
         <ion-label fixed>S/N</ion-label>
         <ion-input type="text" value="JSWX12356CHA"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label fixed>취득수량</ion-label>
-        <ion-input type="text" value="1"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label fixed>취득금액</ion-label>
-        <ion-input type="text" value="94,0000"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label fixed>위치정보</ion-label>
-        <ion-input type="text" value="본사2층"></ion-input>
-      </ion-item>
-        <ion-item>
-        <ion-label fixed>현상태</ion-label>
-        <ion-input type="text" value="사용중"></ion-input>
+        <button ion-button outline item-end icon-left >
+            <ion-icon name="barcode"></ion-icon>
+          SCAN</button>
       </ion-item>
     </ion-item-group>
+    <ion-item-group>
+      <ion-item-divider color="light">변경내역</ion-item-divider>
+        <ion-item>
+            <ion-label fixed>모델명</ion-label>
+            <ion-input type="text" value="DB123459-COU/R"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label fixed>장비사양</ion-label>
+          <ion-input type="text" value=""></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label fixed>기타</ion-label>
+          <ion-input type="text" value=""></ion-input>
+        </ion-item>
+          <ion-item>
+          <ion-label fixed>현상태</ion-label>
+          <ion-input type="text" value="예비등록"></ion-input>
+        </ion-item>
+    </ion-item-group>
   </div>
-
   <div>
   <ion-list>
   <ion-item>
-    <button ion-button outline item-end icon-left>
-      <ion-icon name="star"></ion-icon>
-      현장검수
+    <button ion-button outline item-start icon-left>
+    저장
     </button>
-    <button ion-button outline item-end icon-left>
-      <ion-icon name="star"></ion-icon>
-      입출고
+    <button ion-button outline item-start icon-left>
+    발송
     </button>
-    <button ion-button outline item-end icon-left>
-      <ion-icon name="star"></ion-icon>
-      사양변경
+    <button ion-button outline item-start icon-left>
+    Reset
     </button>
-    <button ion-button outline item-end icon-left>
-      <ion-icon name="star"></ion-icon>
-      이동신청
-    </button>
-  </ion-item>
-   <ion-item>
-    <button ion-button outline item-end icon-left>
-      <ion-icon name="star"></ion-icon>
-      사직자반납
-    </button>
-    <button ion-button outline item-end icon-left>
-      <ion-icon name="star"></ion-icon>
-      대여/회수
-    </button>
-    <button ion-button outline item-end icon-left>
-      <ion-icon name="star"></ion-icon>
-      수리신청
-    </button>
-    <button ion-button outline item-end icon-left>
-      <ion-icon name="star"></ion-icon>
-      이미지
-    </button>
+    <button ion-button icon-only clear outline >
+      <ion-icon name="add-circle"></ion-icon>
+     </button>
   </ion-item>
 </ion-list>
   </div>

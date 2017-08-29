@@ -7,14 +7,14 @@ import {Observable} from 'rxjs/Observable';
 //let apiUrl = 'http://localhost:8080/api/';  // url to   
 //let apiUrl = 'http://rest-service.guides.spring.io/greeting';
 let apiUrl2 ='https://jsonplaceholder.typicode.com';
-let apiUrl = 'https://api.coinmarketcap.com/v1/ticker/NEO/';
+
 import { Todo } from '../pages/todo/todolist';
 
 @Injectable()
 export class AuthService {
 
 // private testapiurl= 'https://mas.hist.co.kr/PdsWorktime.do';
-private testapiurl= 'https://jsonplaceholder.typicode.com/todos';
+private testapiurl= 'https://jsonplaceholder.typicode.com/posts';
 
   private doctors = [];
 
@@ -22,12 +22,19 @@ private testapiurl= 'https://jsonplaceholder.typicode.com/todos';
   constructor(public http: Http) {}
 
   login(credentials) {
+ 
     return new Promise((resolve, reject) => {
         let headers = new Headers();
         headers.append('Content-Type', 'application/json');
         //Performs a request with post http method.
-        //this.http.post(apiUrl+'/posts', JSON.stringify(credentials), {headers: headers})
-        this.http.get(this.testapiurl, {headers: headers})
+      // this.http.post(this.testapiurl, JSON.stringify(credentials), {headers: headers})
+      this.http.post(this.testapiurl, {
+        title: 'foo',
+        body: 'bar',
+        userId: 1
+      }
+    , {headers: headers})
+        //this.http.get(this.testapiurl, {headers: headers})
           .subscribe(res => {
             resolve(res.json());
           }, (err) => {
