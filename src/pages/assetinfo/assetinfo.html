@@ -32,43 +32,43 @@
       </ion-item>
        <ion-item>
         <ion-label fixed>장비구분</ion-label>
-        <ion-input  type="text" value="개인"></ion-input>
+        <ion-input  type="text" value="개인" [disabled]="true"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label fixed>사용자</ion-label>
-        <ion-input  type="text" value="홍길동"></ion-input>
+        <ion-input  type="text" value="홍길동" [disabled]="true"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label fixed>관리부서</ion-label>
-        <ion-input type="text" value="NW기술그룹"></ion-input>
+        <ion-input type="text" value="NW기술그룹" [disabled]="true"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label fixed>품목명</ion-label>
-        <ion-input type="text" value="노트북"></ion-input>
+        <ion-input type="text" value="노트북" [disabled]="true"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label fixed>모델명</ion-label>
-        <ion-input type="text" value="DB123459-COU/R"></ion-input>
+        <ion-input type="text" value="DB123459-COU/R" [disabled]="true"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label fixed>S/N</ion-label>
-        <ion-input type="text" value="JSWX12356CHA"></ion-input>
+        <ion-input type="text" value="JSWX12356CHA" [disabled]="true"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label fixed>취득수량</ion-label>
-        <ion-input type="text" value="1"></ion-input>
+        <ion-input type="text" value="1" [disabled]="true"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label fixed>취득금액</ion-label>
-        <ion-input type="text" value="94,0000"></ion-input>
+        <ion-input type="text" value="94,0000" [disabled]="true"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label fixed>위치정보</ion-label>
-        <ion-input type="text" value="본사2층"></ion-input>
+        <ion-input type="text" value="본사2층" [disabled]="true"></ion-input>
       </ion-item>
         <ion-item>
         <ion-label fixed>현상태</ion-label>
-        <ion-input type="text" value="사용중"></ion-input>
+        <ion-input type="text" value="사용중" [disabled]="true"></ion-input>
       </ion-item>
       <ion-item>
           <ion-label>Gender</ion-label>
@@ -88,7 +88,7 @@
       <ion-icon name="star"></ion-icon>
       현장검수
     </button>
-    <button ion-button outline item-end icon-left>
+    <button ion-button outline item-end icon-left (click)="inoutPage()">
       <ion-icon name="star"></ion-icon>
       입출고
     </button>

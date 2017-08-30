@@ -1,13 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { SiteinspectPage } from '../siteinspect/siteinspect';
-
-/**
- * Generated class for the AssetinfoPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+import { InoutPage } from '../inout/inout';
 
 @IonicPage()
 @Component({
@@ -22,7 +16,12 @@ export class AssetinfoPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad AssetinfoPage');
   }
+  //현자검수 이동
   siteinspectpage() {
     this.navCtrl.push(SiteinspectPage);
+  }
+  //입출고 이동
+  inoutPage() {
+    this.navCtrl.push(InoutPage);
   }
 }

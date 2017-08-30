@@ -42,6 +42,7 @@ export class TodoPage implements OnInit {
     this.showLoader();
     this.authService.todoSearch(this.para).then((result) => {
       this.todos = result;
+      this.presentToast(result);
       console.log(result);
     }, (err) => {
       this.loading.dismiss();
