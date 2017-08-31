@@ -28,7 +28,7 @@
 "proxies": [
   {
   "path": "/Ticker",
-  "proxyUrl": "https://mas.hist.co.kr/PdsWorktime.do"
+  "proxyUrl": "https://api.coinmarketcap.com/v1/ticker/"
   }
 ]
 

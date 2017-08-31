@@ -16,6 +16,7 @@ export class AuthService {
 
 private testapiurl= 'https://jsonplaceholder.typicode.com/posts';
 private barcodeurl = 'https://jsonplaceholder.typicode.com/posts';
+private apiurl='/Ticker';
 
   private doctors = [];
 
@@ -77,7 +78,7 @@ private barcodeurl = 'https://jsonplaceholder.typicode.com/posts';
         headers.append('Content-Type', 'application/json');
         //Performs a request with post http method.
         //this.http.post(apiUrl+'/posts', JSON.stringify(credentials), {headers: headers})
-        this.http.get(this.testapiurl, {headers: headers})
+        this.http.get(this.apiurl, {headers: headers})
           .subscribe(res => {
             resolve(res.json());
           }, (err) => {
