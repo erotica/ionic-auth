@@ -27,6 +27,11 @@ import { AssetinspectPage } from '../pages/assetinspect/assetinspect';
 import { TodoDetailPage } from '../pages/todo-detail/todo-detail';
 import { SiteinspectPage } from '../pages/siteinspect/siteinspect';
 import { InoutPage }  from '../pages/inout/inout';
+import { SpecchangePage } from '../pages/specchange/specchange';
+import { MoveformPage } from '../pages/moveform/moveform';
+import { ResignreturnPage } from '../pages/resignreturn/resignreturn';
+import { LoancollectPage } from '../pages/loancollect/loancollect';
+import { RepairformPage } from '../pages/repairform/repairform';
 
 import { Camera } from '@ionic-native/camera';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
@@ -51,6 +56,11 @@ import { FileTransfer } from '@ionic-native/file-transfer';
     TodoDetailPage,
     SiteinspectPage,
     InoutPage,
+    SpecchangePage,
+    MoveformPage,
+    ResignreturnPage,
+    LoancollectPage,
+    RepairformPage,
   ],
   imports: [
     BrowserModule,
@@ -73,7 +83,12 @@ import { FileTransfer } from '@ionic-native/file-transfer';
     AssetinspectPage,
     TodoDetailPage,
     SiteinspectPage,
-    InoutPage
+    InoutPage,
+    SpecchangePage,
+    MoveformPage,
+    ResignreturnPage,
+    LoancollectPage,
+    RepairformPage,
   ],
   providers: [
     StatusBar,
