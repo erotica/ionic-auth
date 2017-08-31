@@ -28,7 +28,7 @@
 "proxies": [
   {
   "path": "/Ticker",
-  "proxyUrl": "https://api.coinmarketcap.com/v1/ticker/"
+  "proxyUrl": "https://jsonplaceholder.typicode.com/posts"
   }
 ]
 

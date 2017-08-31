@@ -1,5 +1,12 @@
 {
   "name": "ionic-auth",
   "app_id": "",
-  "type": "ionic-angular"
+  "type": "ionic-angular",
+
+  "proxies": [
+    {
+    "path": "/Ticker",
+    "proxyUrl": "https://jsonplaceholder.typicode.com/posts"
+    }
+  ]
 }
