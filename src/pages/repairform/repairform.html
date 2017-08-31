@@ -1,18 +1,86 @@
-<!--
-  Generated template for the RepairformPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
   <ion-navbar>
-    <ion-title>repairform</ion-title>
+  
+    <ion-title>수리반출/회수</ion-title>
+   
   </ion-navbar>
-
 </ion-header>
-
-
 <ion-content padding>
-
+  <div class="font-small">
+  <ion-item-group class="font-small">
+      <ion-item>
+        <ion-label fixed>자산코드</ion-label>
+        <ion-input type="text" value="D20170001"  text-right></ion-input>
+      </ion-item>
+       <ion-item>
+        <ion-label fixed>장비구분</ion-label>
+        <ion-input  type="text" value="개인"  text-right></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>사용자</ion-label>
+        <ion-input  type="text" value="홍길동"  text-right></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>관리부서</ion-label>
+        <ion-input type="text" value="NW기술그룹"  text-right></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>품목명</ion-label>
+        <ion-input type="text" value="노트북" text-right ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>모델명</ion-label>
+        <ion-input type="text" value="DB123459-COU/R"  text-right></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>S/N</ion-label>
+        <ion-input type="text" value="JSWX12356CHA"  text-right></ion-input>
+      </ion-item>
+    </ion-item-group>
+    <ion-item-group>
+      <ion-item-divider color="light">변경내역</ion-item-divider>
+        <ion-item>
+          <ion-label fixed>변동일</ion-label>
+          <ion-input type="text" value="2017.10.20"  text-right></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label >장소(지역,업체)</ion-label>
+            <ion-input type="text" value="인하대병원"  text-right></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label text-wrap >확인담당(현장자산관리담당)</ion-label>
+          <ion-input type="text" value="홍길동"  text-right></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label fixed>회수예정일</ion-label>
+          <ion-input type="text" value="2017.12.10"  text-right></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label fixed>입출고사유</ion-label>
+          <ion-input type="text" value="프로젝트 진행"  text-right></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label fixed>현상태</ion-label>
+          <ion-input type="text" value="사용중"  text-right></ion-input>
+        </ion-item>
+    </ion-item-group>
+  </div>
+  <div>
+  <ion-list>
+    <ion-item>
+      <button ion-button item-start >
+        수리반출
+      </button>
+      <button ion-button item-start >
+        수리연장
+      </button>
+      <button ion-button item-start >
+        수리회수
+      </button>
+      <button ion-button item-start >
+      RESET
+      </button>
+    </ion-item> 
+  </ion-list>
+  </div>
 </ion-content>

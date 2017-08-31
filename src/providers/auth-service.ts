@@ -13,8 +13,9 @@ import { Todo } from '../pages/todo/todolist';
 @Injectable()
 export class AuthService {
 
-// private testapiurl= 'https://mas.hist.co.kr/PdsWorktime.do';
+
 private testapiurl= 'https://jsonplaceholder.typicode.com/posts';
+private barcodeurl = 'https://jsonplaceholder.typicode.com/posts';
 
   private doctors = [];
 
@@ -107,4 +108,18 @@ private testapiurl= 'https://jsonplaceholder.typicode.com/posts';
     return Promise.reject(error.message || error);
   }
  
+  barSearch(credentials) {
+    return new Promise((resolve, reject) => {
+        let headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+        //Performs a request with post http method.
+        //this.http.post(apiUrl+'/posts', JSON.stringify(credentials), {headers: headers})
+        this.http.get(this.barcodeurl, {headers: headers})
+          .subscribe(res => {
+            resolve(res.json());
+          }, (err) => {
+            reject(err);
+          });
+    });
+  }
 }
