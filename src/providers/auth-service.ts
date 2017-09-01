@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Headers } from '@angular/http';
+import { Http, Headers, RequestOptions, URLSearchParams } from '@angular/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
 import {Observable} from 'rxjs/Observable';
@@ -111,16 +111,20 @@ private apiurl='/Ticker';
  
   barSearch(credentials) {
     return new Promise((resolve, reject) => {
-        let headers = new Headers();
-        headers.append('Content-Type', 'application/json');
-        //Performs a request with post http method.
-        //this.http.post(apiUrl+'/posts', JSON.stringify(credentials), {headers: headers})
-        this.http.get(this.barcodeurl, {headers: headers})
-          .subscribe(res => {
-            resolve(res.json());
-          }, (err) => {
-            reject(err);
-          });
+      let myParams = new URLSearchParams(); 
+      myParams.set('id', '1');
+      let headers = new Headers();
+      headers.append('Content-Type', 'application/json');
+      let options = new RequestOptions({ headers: headers, params: myParams });
+      console.log(options);
+      //Performs a request with post http method.
+      //this.http.post(apiUrl+'/posts', JSON.stringify(credentials), {headers: headers})
+      this.http.get(this.apiurl, options)
+        .subscribe(res => {
+          resolve(res.json());
+        }, (err) => {
+          reject(err);
+        });
     });
   }
 }

@@ -25,6 +25,7 @@ export class AssetinfoPage {
   assetinfo: any;
   para: any ;
   loading: any;
+
   constructor(public navCtrl: NavController, 
     public navParams: NavParams, 
     private barcode:BarcodeScanner, 
@@ -36,8 +37,11 @@ export class AssetinfoPage {
     console.log('ionViewDidLoad AssetinfoPage');
   }
   barcodeSearch() {
+    let myParams = new URLSearchParams(); 
+    myParams.set('id', 'D20140209');
+
     this.showLoader();
-    this.authService.barSearch(this.para).then((assetinfo) => {
+    this.authService.barSearch(myParams).then((assetinfo) => {
       this.assetinfo = assetinfo;
       this.presentToast(assetinfo);
       console.log(assetinfo);

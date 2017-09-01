@@ -40,7 +40,7 @@ export class TodoPage implements OnInit {
 
   todoSearch() {
     this.showLoader();
-    this.authService.todoSearch(this.para).then((result) => {
+    this.authService.barSearch(this.para).then((result) => {
       this.todos = result;
      
       console.log(result);
